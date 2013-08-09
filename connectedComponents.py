@@ -7,8 +7,7 @@ import sys
 from bfsAlgorithm import BFS
 
 def connectedComponents(adj_list):
-	explored = set()
-	cc = []
+	explored, cc = set(), []
 	for v in range(1,len(adj_list)+1):
 		if v not in explored:
 			c = BFS(adj_list,v)
