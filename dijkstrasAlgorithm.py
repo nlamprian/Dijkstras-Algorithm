@@ -56,10 +56,8 @@ def graph(filename):
 
 
 if __name__ == "__main__":
-	if len(sys.argv) < 3:
-		sys.exit("Error: No input filename or source vertex.")
-	filename = sys.argv[1]
-	s = int(sys.argv[2]) # source vertex
+	if len(sys.argv) < 3: sys.exit("Error: No input filename or source vertex.")
+	filename, s = sys.argv[1], int(sys.argv[2]) # source vertex
 	# goal vertices whose distance from the source vertex to return
 	ret_vertices = [7,37,59,82,99,115,133,165,188,197]
 	adj_list, cc_adjlist = graph(filename) # build the adjancency list
