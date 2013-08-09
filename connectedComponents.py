@@ -18,8 +18,7 @@ def connectedComponents(adj_list):
 
 if __name__ == "__main__":
 	# Expects a file (adjacency list)
-	if len(sys.argv) < 2:
-		sys.exit("Error: No input filename.")
+	if len(sys.argv) < 2: sys.exit("Error: No input filename.")
 	filename = sys.argv[1]
 
 	adj_list = {}
