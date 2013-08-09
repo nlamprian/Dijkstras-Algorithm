@@ -8,8 +8,7 @@
 import sys
 
 def BFS(adj_list,s):
-	explored = {s}
-	frontier = [s]
+	explored, frontier = {s}, [s]
 	while frontier:
 		v = frontier.pop(0)
 		for w in adj_list[v]:
@@ -23,8 +22,7 @@ if __name__ == "__main__":
 	# Expects a file (adjacency list), and a source vertex
 	if len(sys.argv) < 3:
 		sys.exit("Error: No input filename or source vertex.")
-	filename = sys.argv[1]
-	s = int(sys.argv[2])
+	filename, s = sys.argv[1], int(sys.argv[2])
 
 	adj_list = {}
 	with open(filename, 'r') as f:
