@@ -20,8 +20,7 @@ def BFS(adj_list,s):
 
 if __name__ == "__main__":
 	# Expects a file (adjacency list), and a source vertex
-	if len(sys.argv) < 3:
-		sys.exit("Error: No input filename or source vertex.")
+	if len(sys.argv) < 3: sys.exit("Error: No input filename or source vertex.")
 	filename, s = sys.argv[1], int(sys.argv[2])
 
 	adj_list = {}
