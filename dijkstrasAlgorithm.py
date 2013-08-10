@@ -14,7 +14,7 @@ def dijkstrasAlgorithm(adj_list,spDists,s):
 	# to be considered on a next step for exploration
 	explored, frontier = [], Heap(element=(0,s))
 	
-	while frontier.length(): # as long as there candidate destination vertices, explore them
+	while frontier.length(): # as long as there are candidate destination vertices, explore them
 		key,v = frontier.extractMin() # get the next shortest distance-destination pair
 		explored.append(v) # add the destination to the list with the ones that already explored
 		spDists[v-1] = key # record the distance from the source vertex to that destination vertex
