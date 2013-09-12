@@ -1,8 +1,8 @@
 ''' Dijkstra's Algorithm (Computing Shortest Paths)
     Input:  adj_list - a dictionary with vertices as keys,
                        and edges as values in the form of list of neighboring vertices
-            s - source vertex
-    Output: cc - a list of sets, where every set represents a connected component '''
+            spDists - a list of shortest-path distances to update
+            s - source vertex '''
 
 import sys
 from connectedComponents import connectedComponents
@@ -38,7 +38,7 @@ def initSPDists(adj_list,cc):
 
 
 def graph(filename):
-	# the file is assumed to have, for every vertex v and every edge(v,w) with weight j,
+	# the file is assumed to have, for every vertex v, and every edge(v,w) with weight j,
 	# a line in the following format: v w1,j1 w2,j2 w3,j3 ...
 	adj_list, cc_adjlist = {}, {}
 	with open(filename, 'r') as f:
