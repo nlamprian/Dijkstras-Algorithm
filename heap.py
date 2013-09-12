@@ -2,7 +2,7 @@
     Assumption: Input elements are tuples (x,y,...) or lists [x,y,...]
                 where their first element is a key (score)
                       their second element is an identifier (id)
-                  and then anything can follow '''
+                  and after those two, anything can follow '''
 
 class Heap:
 
