@@ -35,7 +35,10 @@ class Heap:
 	def heapify(self, batch):
 		# heapify builds the heap in linear time
 		# batch - list of elements (key,identifier) to be inserted into the heap
-		for element in batch: self.h.append(element) # populate the heap
+		self.h, self.hIdx = [], {}
+		for idx,element in enumerate(batch): # populate the heap
+			self.h.append(element)
+			self.hIdx[element[1]] = idx
 		for i in range(int(self.length()/2)-1,-1,-1): # enforce the heap property on every element
 			self.__minHeapify(i)
 
