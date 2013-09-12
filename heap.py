@@ -1,7 +1,8 @@
 ''' Implementation of a binary min heap Class
-    Assumption: Input elements are tuples (x,y) or lists [x,y]
+    Assumption: Input elements are tuples (x,y,...) or lists [x,y,...]
                 where their first element is a key (score)
-                  and their second element is an identifier (id) '''
+                      their second element is an identifier (id)
+                  and then anything can follow '''
 
 class Heap:
 
