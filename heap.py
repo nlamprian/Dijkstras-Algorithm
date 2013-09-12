@@ -88,6 +88,7 @@ class Heap:
 		return self.h[self.hIdx[id]] if id in self.hIdx else None
 
 	def delete(self, id):
+		if id not in self.hIdx: return None
 		idx = self.hIdx[id] # get the element's position in the list (heap)
 		del self.hIdx[id] # delete that element's entry from the dictionary
 		node = self.h[idx] # backup the element of interest
