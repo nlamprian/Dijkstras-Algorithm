@@ -7,13 +7,13 @@ def BFS(adj_list, source):
 	
 	Works on both undirected and directed graphs
 
-    Args:
-    	adj_list: a dictionary where the keys are vertex ids, and the values are lists of vertex ids.
+	Args:
+		adj_list: a dictionary where the keys are vertex ids, and the values are lists of vertex ids.
 				  each pair of key-value_j, for value_j \in adj_list[key], constitutes an edge.
 		source: the id of the vertex that acts as a starting point for the algorithm
 
-    Returns:
-    	explored: a set of ids of all reachable vertices from the source vertex
+	Returns:
+		explored: a set of ids of all reachable vertices from the source vertex
 	'''
 	explored, frontier = {source}, [source]
 
